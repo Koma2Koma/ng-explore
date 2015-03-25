@@ -1,7 +1,7 @@
-var myApp = angular.module('myApp', []);
+var sumStuph = angular.module('SumStuph', []);
 
 myApp.factory('Data', function() {
-  return {message: "I'm data from a service."};
+  return {message: "Enter List Item Here"};
 })
 
 
@@ -18,8 +18,3 @@ function SecondCtrl($scope, Data) {
   }
 
 }
-
-
-
-
-

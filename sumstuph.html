@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="SumStuph">
+ <head>
+   <title>AngularJS SumStuff</title>
+   <link rel="stylesheet" href="vendor/foundation.min.css">
+   
+ </head>
+ <body >
+    
+    
+
+      <input type='text' class='testing' ng-model='name' placeholder='Enter your name.'>
+      Hello, {{name}}
+
+    <div ng-controller='ListController'>  
+      <div>
+        
+        <li class="list-group-item" ng-repeat="player in players">
+          {{player}}
+        </li>
+
+        <form ng-sumbit='addItem(listItem)'>
+          <input type="text" ng-model="listItem" ng-sumbit='addItem(listItem)'>
+          <button ng-click='addItem(listItem)'></button>
+        </form>
+        <li ng-repeat='item in list'>
+          {{item}}
+        </li>
+
+        <h1>{{ listItem }}</h1>
+        {{list}}
+        
+      </div>
+
+      <!-- <div ng-if='list.length > 0' ng-repeat='item in list as i'>
+        <h1>{{i}}</h1>
+
+      </div> -->
+
+    </div>
+ 
+
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+  <script type="text/javascript" src='sumstuph.js'></script>
+ </body>
+</html>
